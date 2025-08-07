@@ -20,6 +20,9 @@ RUN npm install --omit=dev && npm run install-playwright
 COPY run-debug-session.py .
 COPY host-debug-editor.mjs .
 
+# Create directories for screenshots and results
+RUN mkdir -p /app/frontend/test-results
+
 # Set environment variables
 # GEMINI_API_KEY should be provided at runtime
 ENV GEMINI_API_KEY=YOUR_GEMINI_API_KEY_HERE
