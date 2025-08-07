@@ -1,0 +1,14 @@
+services:
+  aiio-playwright-debugger-tool:
+    container_name: aiio-playwright-debugger-tool
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./data/test-results:/app/frontend/test-results
+      - ./run-debug-session.py:/app/run-debug-session.py
+      - ./host-debug-editor.mjs:/app/host-debug-editor.mjs
+      # Uncomment the line below if you want to monitor Laravel logs
+      # - /path/to/your/laravel.log:/app/laravel.log:ro
+    env_file:
+      - .env

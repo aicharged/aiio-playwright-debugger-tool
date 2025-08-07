@@ -1,0 +1,14 @@
+{
+  "name": "playwright-debugger",
+  "version": "1.0.0",
+  "description": "Playwright debugging utility",
+  "main": "host-debug-editor.mjs",
+  "scripts": {
+    "start": "node host-debug-editor.mjs",
+    "install-playwright": "npx playwright install --with-deps"
+  },
+  "dependencies": {
+    "playwright": "^1.45.0"
+  },
+  "type": "module"
+}
